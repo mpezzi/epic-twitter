@@ -23,10 +23,21 @@
 <div id="page" class="container">
 
   <header id="header">
-    <h1>Epic Twitter</h1>
+    <div class="page-header">
+      <h1>Epic Twitter</h1>
+    </div>
   </header> <!-- / #header -->
 
   <secton id="main">
+
+    <div class="row panel-container clearfix">
+      <!-- <div class="span3">
+        <div class="panel"><div class="panel-inner">
+          <figure class="front">front</figure>
+          <figure class="back">back</figure>
+        </div></div>
+      </div> -->
+    </div>
 
     <div id="posts">
       <!-- epic tweets will show up here ... -->
@@ -45,6 +56,23 @@
 <script src="js/lib/icanhaz.min.js"></script>
 <script src="js/jquery.twitter.js"></script>
 <script src="js/app.js"></script>
+
+<script id="panel" type="text/html">
+  <div class="span3">
+    <div id="panel-{{ id }}" class="panel"><div class="panel-inner">
+      <figure class="front">
+        <blockquote>
+          <p>{{ text }}</p>
+          <small>{{ from_user }}</small>
+        </blockquote>
+      </figure>
+      <figure class="back">
+        <h3>{{ from_user }}</h3>
+        <img src="{{ profile_image_url }}">
+      </figure>
+    </div></div>
+  </div>
+</script>
 
 <script id="post" type="text/html">
   <div id="post-{{ id }}" class="post">
